@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <!--font awesome linking-->
+    <link rel="icon" href="assets/icons/youtube.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body onload="triggerButton()" class="sidebar-hidden">
+    <div class="container">
+        <!--header and navigation bar-->
+        <header>
+            <nav class="navbar">
+                <div class="nav-section nav-left">
+                <button id="menu-button" onclick="hide()" class="nav-button menu-button">
+                    <i class="fa-solid fa-bars"></i> 
+
+                </button>
+                <a href="" class="nav-logo">
+                    <img src="assets/icons/youtube.svg" alt="logo image" class="logo-image">
+                    <h2 class="logo-text">YouTube</h2>
+                    <h6 class="logo-caption">IN</h6>
+                </a>
+                </div>
+                <div class="nav-section nav-center">
+                <form action="#" class="search-form">
+                    <input type="search" placeholder="     Search" required class="search-input">
+                    <button class="nav-button search-button">
+                        <span class="material-symbols-outlined">
+search
+</span>
+                    </button>
+                </form>
+                <button class="nav-button mic-button">
+                    <span class="material-symbols-outlined">
+mic
+</span>               
+                </button>
+                </div>
+                <div class="nav-section nav-right">
+                    <button class="nav-button search-button">
+                        <span class="material-symbols-outlined">
+search
+</span>
+                    </button>
+                    <button class="nav-button mic-button">
+                    <span class="material-symbols-outlined">
+mic
+</span>               
+                </button>
+                <button class="nav-button theme-button">
+                    <i class="fa-regular fa-moon"></i>                
+                </button>
+                <button class="nav-button create-vid-button">
+                    <span class="material-symbols-outlined">
+                        video_call
+                        </span>            
+                </button>
+                <button class="nav-button bell-button">
+                    <span class="material-symbols-outlined">
+                        notifications
+                        </span>
+                </button>
+                <img src="assets/images/ph-logo-w.jpg" alt="user image" class="user-image">
+                </div>
+            </nav>
+        </header>
+        <main class="main-layout">
+            
+            <!--sidebar-->
+            
+            <aside class="sidebar">
+                <div class="side-fix">
+                    <div class="link-section">
+                        <a href="#" class="link-item button-fix">
+                            <span class="material-symbols-outlined">
+                                home
+                                </span></i>
+                        </a>
+                        <p class="side-caption">Home</p>
+                        <a href="#" class="link-item button-fix">
+                            <span class="material-symbols-outlined">
+                                bolt
+                                </span>
+                        </a>
+                        <p class="side-caption">Shorts</p>
+                        <a href="#" class="link-item button-fix">
+                            <span class="material-symbols-outlined">
+                                subscriptions
+                                </span>
+                        </a>
+                        <p class="side-caption">Subscriptions</p>
+                        <a href="#" class="link-item button-fix">
+                            <span class="material-symbols-outlined">
+                                video_library
+                                </span>
+                        </a>
+                        <p class="side-caption">You</p>
+                    </div>
+                </div>
+                <div class="link-container">
+                    <div class="nav-section nav-left">
+                        <button class="nav-button menu-button">
+                            <i class="fa-solid fa-bars"></i>                
+                        </button>
+                        <a href="" class="nav-logo">
+                            <img src="assets/icons/youtube.svg" alt="logo image" class="logo-image">
+                            <h2 class="logo-text">YouTube</h2>
+                            <h6 class="logo-caption">IN</h6>
+                        </a>
+                    </div>
+                    <div class="link-section">
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                home
+                                </span></i>Home
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                bolt
+                                </span>Shorts
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                subscriptions
+                                </span>Subscriptions
+                        </a>
+                    </div>
+
+                    <div class="section-separator"></div>
+                    <div class="link-section">
+                        <h4 class="section-tittle">You</h4>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                history
+                                </span>History
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                playlist_play
+                                </span>Playlist
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                schedule
+                                </span>Watch later
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                thumb_up
+                                </span>Liked Videos
+                        </a>
+                    </div>
+                    <div class="section-separator"></div>
+
+                    <div class="link-section">
+                        <h4 class="section-tittle">Subscriptions</h4>
+                        <a href="#" class="link-item">
+                            <img src="assets/images/ph-logo-w.jpg" alt="user image" class="user-image">Mythic Vocal
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                list
+                                </span>All subscriptions
+                        </a>
+                    </div>
+                    <div class="section-separator"></div>
+
+                    <div class="link-section">
+                        <h4 class="section-tittle">Explore</h4>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                local_fire_department
+                                </span>Trending
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                local_mall
+                                </span>Shopping
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                music_note
+                                </span>Music
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                movie
+                                </span>Movie
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                sensors
+                                </span>Live
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                stadia_controller
+                                </span>Gaming
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                newsmode
+                                </span>News
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                trophy
+                                </span>Sports
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                lightbulb
+                                </span>Courses
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                styler
+                                </span>Fashion & Buauty
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                podcasts
+                                </span>Podcast
+                        </a>
+                    </div>
+                    <div class="section-separator"></div>
+
+                    <div class="link-section">
+                        <h4 class="section-tittle">More from YouTube</h4>
+                        <a href="#" class="link-item">
+                            <img src="assets/icons/youtube.svg" alt="logo image" class="logo-image">YouTube Premium
+                        </a>
+                        <a href="#" class="link-item">
+                            <img src="assets/icons/youtube-music.svg" alt="logo image" class="logo-image">YouTube Music
+                        </a>
+                        <a href="#" class="link-item">
+                            <img src="assets/icons/youtube-kids-icon.svg" alt="logo image" class="logo-image">YouTube Kids
+                        </a>
+                    </div>
+                    <div class="section-separator"></div>
+
+                    <div class="link-section">
+                        <h4 class="section-tittle">More from YouTube</h4>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                settings
+                                </span>Settings
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                flag
+                                </span>Report History
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                help
+                                </span>Help
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="material-symbols-outlined">
+                                feedback
+                                </span>Send feedback
+                        </a>
+                    </div>
+                    <div class="section-separator"></div>
+                    <p class="footer">About Press Copyright<br>Contact us Creators<br>Advertise Developers<br><br>Terms Privacy Policy & Safety<br>How YouTube works<br>Test new features</p>
+                    <p class="copyright"> @ 2024 Aswin Nadh</p>
+                </div>
+            </aside>
+
+            <div class="content-wrapper">
+                
+                <!--category list-->
+                <div class="category-list">
+                    <button class="category-button active">All</button>
+                    <button class="category-button">Music</button>
+                    <button class="category-button">Tv Shows</button>
+                    <button class="category-button">Melody</button>
+                    <button class="category-button">Comedy</button>
+                    <button class="category-button">Drama</button>
+                    <button class="category-button">Coding</button>
+                    <button class="category-button">C++</button>
+                    <button class="category-button">HTML</button>
+                    <button class="category-button">Java Script</button>
+                    <button class="category-button">React js</button>
+                    <button class="category-button">Style Sheet</button>
+                    <button class="category-button">Node js</button>
+                    <button class="category-button">Medicine</button>
+                    <button class="category-button">Full Stack</button>
+                    <button class="category-button">Gaming</button>
+                    <button class="category-button">History</button>
+                    <button class="category-button">Mythic</button>
+                    <button class="category-button">Discovery</button>
+                    <button class="category-button">Information</button>
+                    <button class="category-button">Animated</button>
+                    <button class="category-button">Recently uploaded</button>
+                    <button class="category-button">New to you</button>
+                </div>
+                
+                <!--video list-->
+                <dv class="videos">
+                    <div class="video-list">
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t13.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">18.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t13.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">eminies rushed into me. Advance gaming skill</h2>
+                                <p class="chanel-name">Eagle Gaming</p>
+                                <p class="views">604k . 7 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t3.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">15.37</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t3.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">Doctor Strange in the multiwolds of madness sourcerous supreme using his abilities</h2>
+                                <p class="chanel-name">Dr.Strange</p>
+                                <p class="views">2.7 M . 5 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t1.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">22.04</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t1.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">Life in antartica and artic circle</h2>
+                                <p class="chanel-name">Discovery</p>
+                                <p class="views">7.1 M .  2 year ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t15.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">47.09</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t15.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">Assassin's creed game play</h2>
+                                <p class="chanel-name">assassin Gaming</p>
+                                <p class="views">454k . 10 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t11.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">8.35</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t11.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">white wolf of alaska</h2>
+                                <p class="chanel-name">Snow land</p>
+                                <p class="views">804 k . 5 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t9.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">22.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t9.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">wild beast river crossing</h2>
+                                <p class="chanel-name">Massai mara</p>
+                                <p class="views">3.3 M . 8 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t12.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">26.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t12.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">eagle while hunding</h2>
+                                <p class="chanel-name">Eagle eye</p>
+                                <p class="views">754k . 8 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t14.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">8.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t14.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">Borderlands game play</h2>
+                                <p class="chanel-name">Border Gaming</p>
+                                <p class="views">64k . 2 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card card1">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t10.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">6.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t10.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">dogs and its breeds</h2>
+                                <p class="chanel-name">guy $ doggy</p>
+                                <p class="views">54k . 1 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card card2">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t2.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">15.09</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t2.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">Avengers endgame climax fight</h2>
+                                <p class="chanel-name">Marvel</p>
+                                <p class="views">11.5 M . 3 year ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </dv>
+                <div class="shorts">
+                    <a href="#" class="link-item">
+                        <img src="assets/icons/youtube-shorts-icon.png" alt="logo image" class="logo-image">Shorts
+                    </a>
+
+                    <div class="shorts-list">
+                    <a href="" class="shorts-card">
+                        <div class="shorts-thumbnail-container">
+                            <img src="assets/images/s1.png" alt="thumbnail" class="shorts-thumbnail">
+                        </div>
+                        <div class="shorts-info">
+                            <div class="shorts-details">
+                                <h2 class="tittle">Spiderman into the spiderverse</h2>
+                                <p class="views">6.5 M views</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="shorts-card">
+                        <div class="shorts-thumbnail-container">
+                            <img src="assets/images/s2.png" alt="thumbnail" class="shorts-thumbnail">
+                        </div>
+                        <div class="shorts-info">
+                            <div class="shorts-details">
+                                <h2 class="tittle">Animie characters</h2>
+                                <p class="views">674k views</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="shorts-card">
+                        <div class="shorts-thumbnail-container">
+                            <img src="assets/images/s3.png" alt="thumbnail" class="shorts-thumbnail">
+                        </div>
+                        <div class="shorts-info">
+                            <div class="shorts-details">
+                                <h2 class="tittle">superman vs darkside</h2>
+                                <p class="views">12.7 M views</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="shorts-card">
+                        <div class="shorts-thumbnail-container">
+                            <img src="assets/images/s4.png" alt="thumbnail" class="shorts-thumbnail">
+                        </div>
+                        <div class="shorts-info">
+                            <div class="shorts-details">
+                                <h2 class="tittle">Our galaxy</h2>
+                                <p class="views">604k views</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="shorts-card">
+                        <div class="shorts-thumbnail-container">
+                            <img src="assets/images/s5.png" alt="thumbnail" class="shorts-thumbnail">
+                        </div>
+                        <div class="shorts-info">
+                            <div class="shorts-details">
+                                <h2 class="tittle">banglore walkway</h2>
+                                <p class="views">615k views</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="shorts-card">
+                        <div class="shorts-thumbnail-container">
+                            <img src="assets/images/s6.png" alt="thumbnail" class="shorts-thumbnail">
+                        </div>
+                        <div class="shorts-info">
+                            <div class="shorts-details">
+                                <h2 class="tittle">paris diaries</h2>
+                                <p class="views">67k views</p>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="video-list">
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t20.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">12.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t20.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">demon slayer tanjiro fight</h2>
+                                <p class="chanel-name">Tanjiro</p>
+                                <p class="views">892k . 4 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t7.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">7.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t7.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">Onpiece character explanasion</h2>
+                                <p class="chanel-name">One piece</p>
+                                <p class="views">4.5 M . 7 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t6.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">38.09</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t6.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">industrial burger making</h2>
+                                <p class="chanel-name"Burger king</p>
+                                <p class="views">864k . 2 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t5.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">8.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t5.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">easy breakfast with nan</h2>
+                                <p class="chanel-name">life foodie</p>
+                                <p class="views">694k . 7 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t4.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">7.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t4.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">different fruits and its juices</h2>
+                                <p class="chanel-name">fruits and veg</p>
+                                <p class="views">6k .  1 week ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t19.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">28.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t19.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">war scene animated</h2>
+                                <p class="chanel-name">vfx mosh</p>
+                                <p class="views">6.2 M . 7 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t18.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">18.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t18.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">is there any aliens</h2>
+                                <p class="chanel-name">myth buster</p>
+                                <p class="views">64k . 3 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t17.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">15.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t17.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">how pyramids were build</h2>
+                                <p class="chanel-name">Egypt civic</p>
+                                <p class="views">609k . 6 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card card1">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t16.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">38.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t16.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">day in paris</h2>
+                                <p class="chanel-name">Paris men</p>
+                                <p class="views">6.7 M . 11 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="video-card card2">
+                        <div class="thumbnail-container">
+                            <img src="assets/images/t2.png" alt="thumbnail" class="thumbnail">
+                            <p class="duration">18.05</p>
+                        </div>
+                        <div class="video-info">
+                            <img src="assets/images/t2.png" alt="channel logo" class="icon">
+                            <div class="video-details">
+                                <h2 class="tittle">eminies rushed into me. Advance gaming skill</h2>
+                                <p class="chanel-name">Eagle Gaming</p>
+                                <p class="views">604k . 7 months ago</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

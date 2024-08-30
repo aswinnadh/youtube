@@ -1,0 +1,66 @@
+@media(max-width: 768px) {
+    .navbar .nav-center {
+        display: none;
+    }
+    .mic-button {
+        background: none;
+    }
+    .main-layout .screen-overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+        background: var(--overlay-dark-color);
+        transition: 0.2s ease;
+    }
+    body.sidebar-hidden .main-layout .screen-overlay{
+        opacity : 0;
+        pointer-events: none;
+    }
+    .main-layout .sidebar {
+        position:absolute;
+        left: 0;
+        top: 0;
+        z-index: 20;
+        height: 100vh;
+    }
+    body.sidebar-hidden .main-layout .sidebar {
+        left: -280px;
+    }
+    .main-layout .sidebar .nav-left {
+        display: flex;
+    }
+    .sidebar-fix{
+        display: none;
+    } .card1{
+        display: none;
+    }
+    .card2{
+        display: none;
+    }
+    
+    
+}
+
+@media (min-width: 768px) and (min-width: 1058px) {
+    .navbar .nav-right .search-button, .navbar .nav-right .mic-button{
+        display: none;
+    }
+    
+}
+@media (min-width: 1058px) and (max-width: 1372px){
+    .card1{
+        display: none;
+    }
+}
+@media (min-width: 1372px) and (max-width: 1688px){
+    .card1{
+        display: none;
+    }
+    .card2{
+        display: none;
+    }
+}
+
